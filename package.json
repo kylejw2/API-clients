@@ -39,5 +39,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "graphql": "^15.5.0",
+    "graphql-request": "^3.4.0",
+    "react-query": "^3.13.11"
   }
 }
