@@ -1,46 +1,49 @@
-# Getting Started with Create React App
+# Dummy Api Exploration
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repo is meant to explore possible solutions for an API layer used in GuideCX Applications.
 
-## Available Scripts
+Each solution can be found on a feature branch within this repo. Here are the current statuses of each networking solution:
 
-In the project directory, you can run:
+`Done`:
 
-### `yarn start`
+- N/A
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+`In Progress`:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- react-query
 
-### `yarn test`
+`Not Started`:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Apollo client (control)
+- URQL
 
-### `yarn build`
+## Acceptance Criteria
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+There are a few things that should be explored with each implementation in order for the test to be considered a success;
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- how does this solution handle state management/caching?
+- will this solution work when there are multiple client apps using it at the same time?
+- how does it handle "complicated" features? EG pagination, re-fetching, cache resolution
+- can we benefit from typescript types? EG codegen equivalent?
+- can we easily configure subscription-like features? EG PubNub, GQL Subscriptions, WebSockets, etc?
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Project Outline
 
-### `yarn eject`
+This project is a basic catalog for super mario games. As the test is not to build UI components, all of the UI has been done for all branches.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+For each implementation (for to meet all the requirements listed above), the following things should be built:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [ ] fetch paginated list of games
+- [ ] fetch from cache when re-visiting page
+- [ ] mutate local cache with game updates
+- [ ] access cache from multiple views
+- [ ] manually update cache from non-api source
+- [ ] use typesafe hooks in a clean, simple API
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## GroundWork To Do
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [ ] finish setting up typescript types
+- [ ] remove `details` route from navbar
+- [ ] add copy to homepage (and update the [designs](./WIREFRAME.png))
+- [ ] add details page UI
+- [ ] start create feature branch for each graphql framework using [this api](https://www.mariouniversalis.fr/graphql/)
