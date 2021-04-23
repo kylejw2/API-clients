@@ -39,5 +39,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@urql/devtools": "^2.0.3",
+    "@urql/exchange-graphcache": "^4.0.0",
+    "graphql": "^15.5.0",
+    "urql": "^2.0.2"
   }
 }

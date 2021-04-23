@@ -40,10 +40,8 @@ For each implementation (for to meet all the requirements listed above), the fol
 - [ ] manually update cache from non-api source
 - [ ] use typesafe hooks in a clean, simple API
 
-## GroundWork To Do
+## Personal Opinion
 
-- [ ] finish setting up typescript types
-- [ ] remove `details` route from navbar
-- [ ] add copy to homepage (and update the [designs](./WIREFRAME.png))
-- [ ] add details page UI
-- [ ] start create feature branch for each graphql framework using [this api](https://www.mariouniversalis.fr/graphql/)
+I'm starting to write this after only 15 minutes of reading URQL docs because I'm seeing plenty of similarities between URQL and Apollo Client. This can be both good and bad. It's good because we're all familiar with Apollo Client but it's bad because few people like Apollo Client. Queries and refetches are almost identical to Apollo Client. Mutations are similar between the two clients. The cache in URQL can be a normalized cache and is represented as a graph. The cache is automatically updated by queries and can be updated by mutations and subscriptions but only if the mutation or subscription returns the entire data object stored on the cache. If they don't have identical properties, we have to manually update the cache. When we create a new entity, we'll have to manually add it to the cache. Exchanges are new and aren't intuitive.
+
+URQL makes me sad.
